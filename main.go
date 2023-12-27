@@ -1,19 +1,22 @@
 package main
 
 import (
+	"fmt"
+
 	lesson "github.com/DEAR/go-example/lesson/ep2"
 )
 
 func main() {
 
-	human := lesson.Human{
-		Name: "DEAR",
-	}
+	rect := lesson.Rectangle{Length: 5, Width: 3}
+	areaRect := lesson.Ep2_calculateArea(rect)
+	fmt.Printf("Rectangle Area: %f\n", areaRect)
 
-	dog := lesson.Dog{
-		Name: "Bobo",
-	}
+	tri := lesson.Triangle{Base: 10, Height: 15}
+	areaTri := lesson.Ep2_calculateArea(tri)
+	fmt.Printf("Triangle Area: %f\n", areaTri)
 
-	lesson.Ep2_Inerface_makeSound(human)
-	lesson.Ep2_Inerface_makeSound(dog)
+	circle := lesson.Circle{Radius: 2}
+	areaCircle := lesson.Ep2_calculateArea(circle)
+	fmt.Printf("Circle Area: %f\n", areaCircle)
 }
