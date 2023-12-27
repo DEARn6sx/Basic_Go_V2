@@ -7,10 +7,14 @@ import (
 )
 
 func main() {
-	emp := lesson.Employee{
-		Name: "DEAR",
-		Salary: 20000,
+	var head *lesson.ListNode
+
+	lesson.Ep2_listNode_prepend(&head, 10)
+	lesson.Ep2_listNode_prepend(&head, 20)
+
+	current := head
+	for current != nil {
+		fmt.Println(current.Value)
+		current = current.Next
 	}
-	lesson.Ep2_pointerStruct_giveRaise(&emp,5000)
-	fmt.Println("After raise :", emp)
 }
