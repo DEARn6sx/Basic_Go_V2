@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lesson.Ep2_PreProcessIfEsle()
+	lesson.Ep2_WhileLoop()
 }
