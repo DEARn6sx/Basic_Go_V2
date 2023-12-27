@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lesson.Ep2_Variable()
+	lesson.Ep2_LogicOperator()
 }
