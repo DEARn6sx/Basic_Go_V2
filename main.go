@@ -8,6 +8,10 @@ import (
 )
 
 func main() {
+	ep1()
+}
+
+func ep1() {
 	id := uuid.New()
 	id_string := uuid.New().String()
 	fmt.Println("Gogogogogogohohohozazac")
