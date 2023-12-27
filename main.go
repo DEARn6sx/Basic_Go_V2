@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lesson.Ep2_SwichCase()
+	lesson.Ep2_PreProcessIfEsle()
 }

@@ -23,3 +23,17 @@ func Ep2_If_Else() {
 	}
 	fmt.Printf("Your grad is %s\n", grade)
 }
+
+func Ep2_PreProcessIfEsle()  {
+	num1 := 5
+	num2 := 10
+
+	sumNum := num1 +num2
+	if sumNum >= 10 {
+		fmt.Println("sumNum more than 10")
+	}
+
+	if sumNum2 := num1+num2; sumNum2 >= 10 {
+		fmt.Println("sumNum2 more than 10")
+	}
+}
