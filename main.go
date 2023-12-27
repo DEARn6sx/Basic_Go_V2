@@ -7,6 +7,15 @@ import (
 )
 
 func main() {
-	sumNum := lesson.Ep2_FuncReturn(5,10)
-	fmt.Println(sumNum)
+	// Create a new Std instance
+	studentInstance := lesson.Std{
+		Firstname: "DEAR",
+		Lastname:  "Nantawat",
+	}
+
+	// Access the Fullname method
+	fullname := studentInstance.Fullname()
+
+	// Print the result
+	fmt.Println("Fullname:", fullname)
 }
