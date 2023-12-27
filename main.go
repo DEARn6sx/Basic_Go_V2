@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lesson.Ep2_If_Else()
+	lesson.Ep2_SwichCase()
 }
