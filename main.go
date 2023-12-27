@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lesson.Ep2_LogicOperator()
+	lesson.Ep2_If_Else()
 }

@@ -33,7 +33,7 @@ func Ep2_RelationalOperator()  {
 	fmt.Println(a <= b) // false
 }
 
-func Ep2_LogicOperator()  {
+func Ep2_LogicalOperator()  {
 	c := true
 	d := false
 	fmt.Println(c && d) // false
