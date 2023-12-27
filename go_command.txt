@@ -1,0 +1,11 @@
+go build main.go //สร้างไฟล์ compile มาก่อนแล้วค่อยเอาไฟล์ ./main ไปรัน
+
+
+npm install -g nodemon //ติดตั้ง nodemon
+
+go mod init github.com/DEAR/go-example //นำ GO module มาใช้
+
+go get github.com/google/uuid //ลง libary generate uuid มาทดลอง
+
+
+
