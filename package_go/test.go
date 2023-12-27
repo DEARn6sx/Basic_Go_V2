@@ -1,6 +1,10 @@
 package package_go
 
-import "fmt"
+import (
+	"fmt"
+
+	internal "github.com/DEAR/go-example/package_go/internal/intenal_pack"
+)
 
 func testHello() {
 	fmt.Println("Hello Gogogogogogog22222")
@@ -8,4 +12,5 @@ func testHello() {
 
 func SayHello2() {
 	testHello()
+	internal.SayHello()
 }
