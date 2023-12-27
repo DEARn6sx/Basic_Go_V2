@@ -7,10 +7,14 @@ import (
 )
 
 func main() {
-	result, err := lesson.Ep2_error_Divide(10,2)
+	err := lesson.Login("user","pass")
 	if err != nil {
-		fmt.Println("Error: ",err)
+		switch e := err.(type){
+		case *lesson.LoginError:
+			fmt.Println("Custom error occurred:",e)
+		default:
+			fmt.Println("Generic error occurred:",e)
+		}
 		return
 	}
-	fmt.Println("Result: ",result)
 }
