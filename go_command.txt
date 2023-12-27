@@ -8,4 +8,9 @@ go mod init github.com/DEAR/go-example //นำ GO module มาใช้
 go get github.com/google/uuid //ลง libary generate uuid มาทดลอง
 
 
+go list -m all //ตรวจสอบ libary ว่ามี package อะไรบ้าง
+
+
+ถ้า func เป็นชื่อตัวพิมพ์เล็กจะ import ไม่ได้
+
 
