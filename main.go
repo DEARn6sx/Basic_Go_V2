@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lesson.Ep2_Map()
+	lesson.Ep2_StructInStruct()
 }
