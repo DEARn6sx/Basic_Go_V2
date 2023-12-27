@@ -1,21 +1,19 @@
 package main
 
 import (
-	"fmt"
-
 	lesson "github.com/DEAR/go-example/lesson/ep2"
 )
 
 func main() {
-	// Create a new Std instance
-	studentInstance := lesson.Std{
-		Firstname: "DEAR",
-		Lastname:  "Nantawat",
+
+	human := lesson.Human{
+		Name: "DEAR",
 	}
 
-	// Access the Fullname method
-	fullname := studentInstance.Fullname()
+	dog := lesson.Dog{
+		Name: "Bobo",
+	}
 
-	// Print the result
-	fmt.Println("Fullname:", fullname)
+	lesson.Ep2_Inerface_makeSound(human)
+	lesson.Ep2_Inerface_makeSound(dog)
 }
