@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lesson.Ep2_WhileLoop()
+	lesson.Ep2_Slice()
 }
