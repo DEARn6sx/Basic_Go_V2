@@ -7,16 +7,17 @@ import (
 )
 
 func main() {
+	x := 20
+	lesson.Ep2_changeValue(x)
+	fmt.Println(x)
 
-	rect := lesson.Rectangle{Length: 5, Width: 3}
-	areaRect := lesson.Ep2_calculateArea(rect)
-	fmt.Printf("Rectangle Area: %f\n", areaRect)
+	lesson.Ep2_changeValuePointer(&x) //ส่งที่อยู่ไป
+	fmt.Println(x)
 
-	tri := lesson.Triangle{Base: 10, Height: 15}
-	areaTri := lesson.Ep2_calculateArea(tri)
-	fmt.Printf("Triangle Area: %f\n", areaTri)
-
-	circle := lesson.Circle{Radius: 2}
-	areaCircle := lesson.Ep2_calculateArea(circle)
-	fmt.Printf("Circle Area: %f\n", areaCircle)
+	y := 10
+	var p *int = &y
+	fmt.Println("value of y : ",y)
+	fmt.Println("value of p : ",*p)
+	*p = 20
+	fmt.Println("value of y : ",y)
 }
