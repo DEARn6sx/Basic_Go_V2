@@ -7,14 +7,10 @@ import (
 )
 
 func main() {
-	var head *lesson.ListNode
-
-	lesson.Ep2_listNode_prepend(&head, 10)
-	lesson.Ep2_listNode_prepend(&head, 20)
-
-	current := head
-	for current != nil {
-		fmt.Println(current.Value)
-		current = current.Next
+	result, err := lesson.Ep2_error_Divide(10,2)
+	if err != nil {
+		fmt.Println("Error: ",err)
+		return
 	}
+	fmt.Println("Result: ",result)
 }
