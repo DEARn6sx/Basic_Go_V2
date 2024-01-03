@@ -4,6 +4,8 @@ import (
 	lesson "github.com/DEAR/go-example/lesson/ep3"
 )
 
+
 func main() {
-	lesson.Ep3_FiberRunHttpServer()	
+	
+	lesson.Ep3_ListBook()
 }
