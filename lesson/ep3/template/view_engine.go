@@ -15,7 +15,7 @@ func Ep3_Views_Template() {
 	})
   
 	// Setup route
-	app.Get("/d", renderTemplate)
+	app.Get("/template", renderTemplate)
   
 	app.Listen(":8080")
   }
