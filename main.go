@@ -7,5 +7,5 @@ import (
 
 func main() {
 	
-	lesson.Ep3_CreateListBook()
+	lesson.Ep3_UpdateListBook()
 }
