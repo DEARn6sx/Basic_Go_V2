@@ -1,9 +1,9 @@
 package main
 
 import (
-	lesson "github.com/DEAR/go-example/lesson/ep3/env"
+	lesson "github.com/DEAR/go-example/lesson/ep3"
 )
 
 func main() {
-	lesson.Ep3_Env()
+	lesson.Ep3_RESTApi()
 }
