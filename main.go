@@ -1,11 +1,10 @@
 package main
 
 import (
-	lesson "github.com/DEAR/go-example/lesson/ep3"
+	lesson "github.com/DEAR/go-example/lesson/ep3/template"
 )
 
-
 func main() {
-	
-	lesson.Ep3_Book()
+
+	lesson.Ep3_Views_Template()
 }

@@ -10,7 +10,7 @@ type Book struct {
 
 var books []Book
 
-func Ep3_Book() {
+func Ep3_RESTApi() {
 	app := fiber.New()
 
 	books = append(books, Book{ID: 1, Title: "DEAR Fiber API", Author: "DEAR"})
