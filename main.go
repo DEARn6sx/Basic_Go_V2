@@ -1,9 +1,9 @@
 package main
 
 import (
-	lesson "github.com/DEAR/go-example/lesson/ep3"
+	lesson "github.com/DEAR/go-example/lesson/ep3/login"
 )
 
 func main() {
-	lesson.Ep3_RESTApi()
+	lesson.Ep3_login()
 }
