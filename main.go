@@ -7,14 +7,15 @@ import (
 )
 
 func main() {
-	err := lesson.Login("user","pass")
+	err := lesson.Login("admin", "1234")
 	if err != nil {
-		switch e := err.(type){
+		switch e := err.(type) {
 		case *lesson.LoginError:
-			fmt.Println("Custom error occurred:",e)
+			fmt.Println("Custom error occurred:", e)
 		default:
-			fmt.Println("Generic error occurred:",e)
+			fmt.Println("Generic error occurred:", e)
 		}
 		return
 	}
+	fmt.Println("Login successful!")
 }
