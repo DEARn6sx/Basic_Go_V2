@@ -20,9 +20,9 @@ const (
 var db *sql.DB
 
 type Product struct {
-	ID    int
-	Name  string
-	Price int
+	ID         int
+	Name       string
+	Price      int
 }
 
 func main() {
@@ -40,6 +40,7 @@ func main() {
 
 	db = sdb
 
+	//check db ส่งสัญญาณมาหรือไม่
 	err = db.Ping()
 	if err != nil {
 		log.Fatal(err)
@@ -47,14 +48,15 @@ func main() {
 
 	fmt.Println("conntecion sucess")
 
-	err = createProducts(&Product{Name: "GoProduct2", Price: 22555})
+	err = createProducts(&Product{Name: "6", Price: 6})
 	if err != nil {
 		log.Fatal(err)
 	}
-	print("Create Success")
+	fmt.Println("Create Successful")
 }
 
 func createProducts(product *Product) error {
+	//Exec เป็นการ run คำสั่งที่ไม่ต้องการ return กลับมา แค่ต้องการ return ว่า error มั้ยแค่นั้น
 	_, err := db.Exec(
 		"INSERT INTO public.products(name, price)VALUES ($1, $2);",
 		product.Name,
