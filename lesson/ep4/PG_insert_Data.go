@@ -5,9 +5,9 @@ import (
 	"log"
 )
 
-func Ep4_createProduct(n string, p int) {
+func Ep4_createProduct(n string, p int, sid int) {
 	// insert
-	err := createProduct(&Product{Name: n, Price: p})
+	err := createProduct(&Product{Name: n, Price: p, Supplier_id: sid})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -17,9 +17,10 @@ func Ep4_createProduct(n string, p int) {
 
 func createProduct(product *Product) error {
 	_, err := db.Exec(
-		"INSERT INTO public.products(name, price) VALUES ($1, $2);",
+		"INSERT INTO public.products(name, price,supplier_id) VALUES ($1, $2,$3);",
 		product.Name,
 		product.Price,
+		product.Supplier_id,
 	)
 
 	if err != nil {
