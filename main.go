@@ -9,7 +9,7 @@ import (
 func main() {
 	lesson.Connect_DB()
 
-	lesson.Ep4_createProduct2("5", 1, 2)
+	lesson.Ep4_createProduct2("UUUUU", 1, 2)
 
 	//lesson.Ep4_selectProduct(8)
 

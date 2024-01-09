@@ -9,11 +9,12 @@ import (
 func Ep4_createProduct(n string, p int, sid int) {
 	// Check if the product already exists
 	if !productExists(n, p, sid) {
+		fmt.Println("Before insert product")
 		// Insert only if the product doesn't exist
-		err := createProduct(&Product{Name: n, Price: p, Supplier_id: sid})
-		if err != nil {
-			log.Fatal(err)
-		}
+		// err := createProduct(&Product{Name: n, Price: p, Supplier_id: sid})
+		// if err != nil {
+		// 	log.Fatal(err)
+		// }
 
 		fmt.Println("Successfully Created!")
 	} else {
@@ -46,6 +47,8 @@ func productExists(name string, price int, supplierID int) bool {
 	if err != nil && err != sql.ErrNoRows {
 		log.Printf("Error checking if product exists: %v", err)
 	}
+
+	fmt.Println("count is : ", count)
 
 	return count > 0
 }
