@@ -11,10 +11,10 @@ func Ep4_createProduct(n string, p int, sid int) {
 	if !productExists(n, p, sid) {
 		fmt.Println("Before insert product")
 		// Insert only if the product doesn't exist
-		// err := createProduct(&Product{Name: n, Price: p, Supplier_id: sid})
-		// if err != nil {
-		// 	log.Fatal(err)
-		// }
+		err := createProduct(&Product{Name: n, Price: p, Supplier_id: sid})
+		if err != nil {
+			log.Fatal(err)
+		}
 
 		fmt.Println("Successfully Created!")
 	} else {

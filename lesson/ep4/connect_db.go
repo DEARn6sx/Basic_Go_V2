@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	host     = "localhost"  // or the Docker service name if running in another container
-	port     = 5432         // default PostgreSQL port
+	host     = "localhost"      // or the Docker service name if running in another container
+	port     = 5432             // default PostgreSQL port
 	user     = "mydearuser"     // as defined in docker-compose.yml
 	password = "mydearpassword" // as defined in docker-compose.yml
 	dbname   = "mydeardatabase" // as defined in docker-compose.yml
@@ -17,13 +17,13 @@ const (
 var db *sql.DB
 
 type Product struct {
-	ID    int
-	Name  string
-	Price int
+	ID          int
+	Name        string
+	Price       int
 	Supplier_id int
 }
 
-func Connect_DB()  {
+func Connect_DB() {
 	// Connection string
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
 		"password=%s dbname=%s sslmode=disable",
@@ -37,6 +37,7 @@ func Connect_DB()  {
 
 	db = sdb
 
+
 	// Check the connection
 	err = db.Ping()
 	if err != nil {
@@ -45,4 +46,3 @@ func Connect_DB()  {
 
 	fmt.Println("Successfully connected!")
 }
- 
