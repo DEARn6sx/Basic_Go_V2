@@ -23,6 +23,17 @@ type Product struct {
 	Supplier_id int
 }
 
+type Suppliers struct {
+	ID          int
+	Name        string
+}
+
+type ProductWithSupplier struct {
+	ProductID        int
+	ProductName      string
+	Price            int
+	SupplierName     string
+  }
 func Connect_DB() {
 	// Connection string
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+

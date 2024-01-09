@@ -17,5 +17,7 @@ func main() {
 
 	//lesson.Ep4_deleteProductt(19)
 
-	lesson.Ep4_getAllProduct()
+	//lesson.Ep4_getAllProduct()
+
+	lesson.Ep4_getJoinProduct()
 }
