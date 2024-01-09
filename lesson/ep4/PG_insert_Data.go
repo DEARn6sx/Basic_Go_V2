@@ -6,32 +6,23 @@ import (
 	"log"
 )
 
-func Ep4_createProduct() {
-	// Start a transaction
-	tx, err := db.Begin()
-	if err != nil {
-		log.Fatal(err)
-	}
+func Ep4_createProduct(n string, p int, sid int) {
+	// Check if the product already exists
+	if !productExists(n, p, sid) {
+		// Insert only if the product doesn't exist
+		err := createProduct(&Product{Name: n, Price: p, Supplier_id: sid})
+		if err != nil {
+			log.Fatal(err)
+		}
 
-	// Insert
-	err = createProduct(tx, &Product{Name: "x", Price: 1, Supplier_id: 2})
-	if err != nil {
-		// Rollback the transaction on error
-		tx.Rollback()
-		log.Fatal(err)
+		fmt.Println("Successfully Created!")
+	} else {
+		fmt.Println("Product already exists.")
 	}
-
-	// Commit the transaction
-	err = tx.Commit()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println("Successfully Created!")
 }
 
-func createProduct(tx *sql.Tx, product *Product) error {
-	_, err := tx.Exec(
+func createProduct(product *Product) error {
+	_, err := db.Exec(
 		"INSERT INTO public.products(name, price, supplier_id) VALUES ($1, $2, $3);",
 		product.Name,
 		product.Price,
@@ -43,4 +34,18 @@ func createProduct(tx *sql.Tx, product *Product) error {
 	}
 
 	return err
+}
+
+func productExists(name string, price int, supplierID int) bool {
+	var count int
+	err := db.QueryRow(
+		"SELECT COUNT(*) FROM public.products WHERE name = $1 AND price = $2 AND supplier_id = $3",
+		name, price, supplierID,
+	).Scan(&count)
+
+	if err != nil && err != sql.ErrNoRows {
+		log.Printf("Error checking if product exists: %v", err)
+	}
+
+	return count > 0
 }
