@@ -9,9 +9,9 @@ import (
 const (
 	host     = "localhost"  // or the Docker service name if running in another container
 	port     = 5432         // default PostgreSQL port
-	user     = "myuser"     // as defined in docker-compose.yml
-	password = "mypassword" // as defined in docker-compose.yml
-	dbname   = "mydatabase" // as defined in docker-compose.yml
+	user     = "mydearuser"     // as defined in docker-compose.yml
+	password = "mydearpassword" // as defined in docker-compose.yml
+	dbname   = "mydeardatabase" // as defined in docker-compose.yml
 )
 
 var db *sql.DB
