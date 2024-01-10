@@ -17,10 +17,10 @@ const (
 var db *sql.DB
 
 type Product struct {
-	ID          int
-	Name        string
-	Price       int
-	Supplier_id int
+	ID          int    `json:"id"`
+	Name        string `json:"name"`
+	Price       int    `json:"price"`
+	Supplier_id int    `json:"supplier_id"`
 }
 
 type Suppliers struct {
@@ -57,3 +57,18 @@ func Connect_DB() {
 
 	fmt.Println("Successfully connected!")
 }
+
+
+//lesson.Connect_DB()
+
+	//lesson.Ep4_createProduct("nooode", 555, 1)
+
+	//lesson.Ep4_selectProduct(8)
+
+	//lesson.Ep4_updateProduct(11,"jjjjj",1111)
+
+	//lesson.Ep4_deleteProductt(19)
+
+	//lesson.Ep4_getAllProduct()
+
+	//lesson.Ep4_getJoinProduct()
